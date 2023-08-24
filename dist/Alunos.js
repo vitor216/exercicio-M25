@@ -56,6 +56,9 @@ function EnserirAlunosAprovados() {
     AlunosAprovados.push(Aluno5.nome);
   } else {}
 }
+var ABC = AlunosAprovados.filter(function (item) {
+  return item.media >= 6;
+});
 somar();
 console.log(total1);
 console.log(total2);
@@ -70,3 +73,4 @@ console.log("A media do Aluno " + Aluno4.nome + " é igual a " + total44);
 console.log("A media do Aluno " + Aluno5.nome + " é igual a " + total55);
 EnserirAlunosAprovados();
 console.log(AlunosAprovados);
+console.log(ABC);
