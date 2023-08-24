@@ -24,7 +24,6 @@ var total22 = 0;
 var total33 = 0;
 var total44 = 0;
 var total55 = 0;
-var AlunosAprovados = [];
 function somar() {
   total1 = Aluno1.nota1 + Aluno1.nota2 + Aluno1.nota3 + Aluno1.nota4;
   total2 = Aluno2.nota1 + Aluno2.nota2 + Aluno2.nota3 + Aluno2.nota4;
@@ -39,24 +38,7 @@ function Media() {
   total44 = total4 / 4;
   total55 = total5 / 4;
 }
-function EnserirAlunosAprovados() {
-  if (total11 >= 6) {
-    AlunosAprovados.push(Aluno1.nome);
-  } else {}
-  if (total22 >= 6) {
-    AlunosAprovados.push(Aluno2.nome);
-  } else {}
-  if (total33 >= 6) {
-    AlunosAprovados.push(Aluno3.nome);
-  } else {}
-  if (total44 >= 6) {
-    AlunosAprovados.push(Aluno4.nome);
-  } else {}
-  if (total55 >= 6) {
-    AlunosAprovados.push(Aluno5.nome);
-  } else {}
-}
-var ABC = AlunosAprovados.filter(function (item) {
+var ABC = Alunos.filter(function (item) {
   return item.media >= 6;
 });
 somar();

@@ -26,8 +26,6 @@ let total33 = 0;
 let total44 = 0;
 let total55 = 0;
 
-let AlunosAprovados = [];
-
 function somar() {
     total1 = Aluno1.nota1 + Aluno1.nota2 + Aluno1.nota3 + Aluno1.nota4;
     total2 = Aluno2.nota1 + Aluno2.nota2 + Aluno2.nota3 + Aluno2.nota4;
@@ -44,25 +42,7 @@ function Media() {
     total55 = total5 / 4;
 }
 
-function EnserirAlunosAprovados() {
-    if (total11 >= 6) {
-    AlunosAprovados.push(Aluno1.nome);
-    }else {}
-    if (total22 >= 6) {
-        AlunosAprovados.push(Aluno2.nome);
-    }else {}
-    if (total33 >= 6) {
-        AlunosAprovados.push(Aluno3.nome);
-    }else {}
-    if (total44 >= 6) {
-        AlunosAprovados.push(Aluno4.nome);
-    }else {}
-    if (total55 >= 6) {
-        AlunosAprovados.push(Aluno5.nome);
-    }else {}
-}
-
-const ABC = AlunosAprovados.filter(function(item){
+const ABC = Alunos.filter(function(item){
     return item.media >= 6;
 })
 
